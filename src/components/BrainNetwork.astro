@@ -1,0 +1,44 @@
+---
+// BrainNetwork.astro — decorative animated node graph (the "many brains" motif).
+// Pure SVG + scoped CSS animation, no client JS.
+interface Node { id: string; x: number; y: number; r: number }
+const nodes: Node[] = [
+  { id: 'n1', x: 80,  y: 90,  r: 6 },
+  { id: 'n2', x: 200, y: 50,  r: 5 },
+  { id: 'n3', x: 330, y: 110, r: 7 },
+  { id: 'n4', x: 150, y: 180, r: 5 },
+  { id: 'n5', x: 280, y: 210, r: 6 },
+  { id: 'n6', x: 420, y: 70,  r: 5 },
+  { id: 'n7', x: 470, y: 190, r: 6 },
+  { id: 'n8', x: 60,  y: 230, r: 5 },
+  { id: 'n9', x: 360, y: 280, r: 7 },
+];
+const edges: [string, string][] = [
+  ['n1','n2'], ['n2','n3'], ['n1','n4'], ['n4','n5'], ['n3','n5'],
+  ['n3','n6'], ['n6','n7'], ['n5','n7'], ['n4','n8'], ['n5','n9'], ['n7','n9'],
+];
+const pos = Object.fromEntries(nodes.map(n => [n.id, n]));
+---
+<svg class="brain-net" viewBox="0 0 520 340" fill="none" aria-hidden="true">
+  <g class="edges" stroke="#E8734A" stroke-opacity="0.25" stroke-width="1">
+    {edges.map(([a, b]) => (
+      <line x1={pos[a].x} y1={pos[a].y} x2={pos[b].x} y2={pos[b].y} />
+    ))}
+  </g>
+  <g class="nodes">
+    {nodes.map((n, i) => (
+      <circle cx={n.x} cy={n.y} r={n.r} fill="#E8734A" style={`animation-delay:${i * 0.35}s`} />
+    ))}
+  </g>
+</svg>
+<style>
+  .brain-net { width: 100%; height: auto; max-width: 620px; }
+  .nodes circle { opacity: 0.35; animation: pulse 3.2s ease-in-out infinite; }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.35; }
+    50%      { opacity: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .nodes circle { animation: none; opacity: 0.6; }
+  }
+</style>

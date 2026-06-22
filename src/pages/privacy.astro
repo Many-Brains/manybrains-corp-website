@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+const updated = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<BaseLayout title="Privacy Policy — Many Brains, Inc." description="Privacy policy for Many Brains, Inc." path="/privacy">
+  <Nav />
+  <main class="max-w-3xl mx-auto px-6 pt-32 pb-24">
+    <h1 class="text-4xl font-bold tracking-tight">Privacy Policy</h1>
+    <p class="text-white/40 text-sm mt-2">Last updated: {updated}</p>
+    <div class="mt-8 space-y-5 text-white/70 leading-relaxed">
+      <p>Many Brains, Inc. ("Many Brains," "we," "us") operates this website at manybrains.us. This policy explains how we handle information in connection with this corporate website.</p>
+      <h2 class="text-xl font-semibold text-white mt-8">Information we collect</h2>
+      <p>This is a static informational website. We do not operate accounts, forms, or trackers on this site. If you email us at hello@manybrains.us, we receive the information you choose to send.</p>
+      <h2 class="text-xl font-semibold text-white mt-8">How we use information</h2>
+      <p>We use information you send us solely to respond to your inquiry. We do not sell personal information.</p>
+      <h2 class="text-xl font-semibold text-white mt-8">Our portfolio companies</h2>
+      <p>Products and services operated by our portfolio companies are governed by their own separate privacy policies, available on their respective websites.</p>
+      <h2 class="text-xl font-semibold text-white mt-8">Contact</h2>
+      <p>Questions about this policy? Email <a href="mailto:hello@manybrains.us" class="text-accent">hello@manybrains.us</a>.</p>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
