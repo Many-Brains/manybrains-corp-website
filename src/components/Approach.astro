@@ -1,0 +1,32 @@
+---
+const cards = [
+  {
+    title: 'AI-assisted operating model',
+    body: 'Every company we run is built with AI in the loop — research, engineering, design, and operations, accelerated end to end.',
+  },
+  {
+    title: 'Small team, large output',
+    body: 'A lean group of operators ships the output of a much larger organization, with the help of many AI brains.',
+  },
+  {
+    title: 'A portfolio of real businesses',
+    body: 'Not experiments — operating companies serving real customers across nutrition, education, outdoor, legal, and home services.',
+  },
+];
+---
+<section id="approach" class="py-28 px-6 bg-bg-surface">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-center">Why Many Brains</h2>
+    <p class="text-white/50 text-center max-w-[640px] mx-auto mt-4">
+      The common thread across everything we build.
+    </p>
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+      {cards.map((c) => (
+        <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-7">
+          <h3 class="text-lg font-semibold text-accent">{c.title}</h3>
+          <p class="text-white/60 leading-relaxed mt-3 text-[15px]">{c.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
