@@ -1,0 +1,66 @@
+---
+interface Company {
+  name: string;
+  logo: string;
+  description: string;
+  url: string;
+}
+const companies: Company[] = [
+  {
+    name: 'Heather AI',
+    logo: '/logos/heather-ai.svg',
+    description: 'AI nutrition coaching that gives real-time guidance for meals, dining out, and GLP-1 transitions.',
+    url: 'https://getheatherai.com',
+  },
+  {
+    name: 'Tutorville',
+    logo: '/logos/tutorville.svg',
+    description: 'A tutoring marketplace connecting students with vetted tutors for measurable results.',
+    url: 'https://tutorville.co',
+  },
+  {
+    name: 'The Life Care Planners',
+    logo: '/logos/lifecareplanners.svg',
+    description: 'An expert-witness directory connecting attorneys with qualified life care planning experts.',
+    url: 'https://thelifecareplanners.com',
+  },
+  {
+    name: 'Yonderey',
+    logo: '/logos/yonderey.png',
+    description: 'A marketplace pairing adventurers with certified mountain guides to plan expeditions.',
+    url: 'https://yonderey.com',
+  },
+  {
+    name: 'Upscape',
+    logo: '/logos/upscape.webp',
+    description: 'Custom luxury landscape lighting design and installation for homeowners.',
+    url: 'https://getupscaped.com',
+  },
+];
+---
+<section id="portfolio" class="py-28 px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-center">Our portfolio</h2>
+    <p class="text-white/50 text-center max-w-[640px] mx-auto mt-4">
+      Operating companies we build and run.
+    </p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
+      {companies.map((c) => (
+        <a
+          href={c.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group rounded-2xl border border-white/10 bg-white/[0.02] p-7 flex flex-col hover:border-accent/40 hover:-translate-y-0.5 transition-all"
+        >
+          <div class="h-12 flex items-center">
+            <img src={c.logo} alt={`${c.name} logo`} class="max-h-10 max-w-[180px] w-auto object-contain" loading="lazy" />
+          </div>
+          <p class="text-white/60 leading-relaxed mt-5 text-[15px] flex-1">{c.description}</p>
+          <span class="text-accent text-sm font-medium mt-5 inline-flex items-center gap-1">
+            Visit site <span class="group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
