@@ -1,8 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
 ---
-<BaseLayout title="Many Brains, Inc." description="A portfolio of businesses, built by many brains." path="/">
-  <main class="min-h-screen flex items-center justify-center">
-    <h1 class="text-3xl">Many Brains</h1>
+<BaseLayout title="Many Brains, Inc. — A portfolio of businesses, built by many brains." description="Many Brains operates a growing portfolio of companies, accelerated by AI and run by a small team doing the work of many." path="/">
+  <Nav />
+  <main>
+    <Hero />
   </main>
 </BaseLayout>
