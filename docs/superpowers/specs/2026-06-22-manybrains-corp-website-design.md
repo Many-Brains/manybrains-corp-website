@@ -73,7 +73,8 @@ Sections, top to bottom:
    - *AI-assisted operating model*
    - *Small team, large output*
    - *Portfolio of real businesses*
-4. **Portfolio grid** — five cards, each linking out (target `_blank`, `rel="noopener"`):
+4. **Portfolio grid** — five cards, each with the company **logo** and linking out
+   (target `_blank`, `rel="noopener"`):
    - **Heather AI** — AI nutrition coaching that gives real-time guidance for meals,
      dining out, and GLP-1 transitions. → https://getheatherai.com
    - **Tutorville** — A tutoring marketplace connecting students with vetted tutors for
@@ -99,7 +100,8 @@ Each component has one clear purpose, mirroring the Heather AI structure:
   node-graph SVG.
 - `components/Approach.astro` — the three "why" cards.
 - `components/Portfolio.astro` — the five portfolio cards (data-driven from a small
-  array of company objects).
+  array of company objects: name, logo path, description, URL). Each card displays the
+  company logo.
 - `components/Contact.astro` — contact CTA section.
 - `components/Footer.astro` — legal line, links, copyright.
 - `pages/index.astro` — composes the above.
@@ -111,6 +113,12 @@ Each component has one clear purpose, mirroring the Heather AI structure:
 - `astro.config.mjs` — `site: 'https://manybrains.us'`, sitemap + tailwind vite plugin.
 - `package.json` — same scripts as Heather AI (`dev`, `build`, `preview`, `astro`).
 - Favicon + OG image in `public/`.
+- Portfolio logos in `public/logos/` (one per company). Sourced from each company's
+  website (logo `<img>`, OG image, or favicon). Some may need light cleanup — recoloring
+  for the dark theme, trimming whitespace, or normalizing to a consistent height/format
+  (prefer SVG/PNG). On the dark background, logos render in a uniform card treatment
+  (consistent max height, optional subtle container) so mismatched source styles still
+  look cohesive. If a usable logo can't be extracted, fall back to a clean wordmark.
 - `.gitignore` already present (node_modules, dist, .astro, env, etc.).
 
 ## Deployment
@@ -122,8 +130,8 @@ Each component has one clear purpose, mirroring the Heather AI structure:
 ## Success Criteria
 
 1. `npm run build` produces a static site with no errors.
-2. Site renders correctly: hero animation, all five portfolio links resolve to the
-   correct external sites, contact mailto works.
+2. Site renders correctly: hero animation, each portfolio card shows the company logo,
+   all five portfolio links resolve to the correct external sites, contact mailto works.
 3. Footer clearly identifies "Many Brains, Inc." as a Delaware C-Corporation.
 4. Deployed to Vercel and reachable at manybrains.us.
 5. Legal name and details on the site match the C-Corp for Apple Developer verification.
