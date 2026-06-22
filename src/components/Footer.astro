@@ -1,0 +1,33 @@
+---
+const year = new Date().getFullYear();
+const links = [
+  { name: 'Heather AI', url: 'https://getheatherai.com' },
+  { name: 'Tutorville', url: 'https://tutorville.co' },
+  { name: 'The Life Care Planners', url: 'https://thelifecareplanners.com' },
+  { name: 'Yonderey', url: 'https://yonderey.com' },
+  { name: 'Upscape', url: 'https://getupscaped.com' },
+];
+---
+<footer class="border-t border-white/10 px-6 py-14">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+    <div>
+      <div class="font-bold tracking-tight">Many Brains</div>
+      <p class="text-white/40 text-sm mt-2 max-w-sm leading-relaxed">
+        Many Brains, Inc. — a Delaware C-Corporation.
+      </p>
+      <p class="text-white/30 text-xs mt-3">&copy; {year} Many Brains, Inc. All rights reserved.</p>
+    </div>
+    <div class="flex flex-col gap-2 text-sm">
+      <span class="text-white/40 text-xs uppercase tracking-wider mb-1">Portfolio</span>
+      {links.map((l) => (
+        <a href={l.url} target="_blank" rel="noopener noreferrer" class="text-white/60 hover:text-white transition-colors">{l.name}</a>
+      ))}
+    </div>
+    <div class="flex flex-col gap-2 text-sm">
+      <span class="text-white/40 text-xs uppercase tracking-wider mb-1">Company</span>
+      <a href="mailto:hello@manybrains.us" class="text-white/60 hover:text-white transition-colors">hello@manybrains.us</a>
+      <a href="/privacy" class="text-white/60 hover:text-white transition-colors">Privacy</a>
+      <a href="/terms" class="text-white/60 hover:text-white transition-colors">Terms</a>
+    </div>
+  </div>
+</footer>
