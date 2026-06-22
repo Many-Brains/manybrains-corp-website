@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="7" fill="#0a0a0a"/>
-  <g stroke="#E8734A" stroke-width="1.5">
-    <line x1="8" y1="9" x2="16" y2="16"/>
-    <line x1="8" y1="23" x2="16" y2="16"/>
-    <line x1="24" y1="9" x2="16" y2="16"/>
-    <line x1="24" y1="23" x2="16" y2="16"/>
-  </g>
-  <g fill="#E8734A">
-    <circle cx="8" cy="9" r="2.5"/><circle cx="8" cy="23" r="2.5"/>
-    <circle cx="24" cy="9" r="2.5"/><circle cx="24" cy="23" r="2.5"/>
-    <circle cx="16" cy="16" r="3.5" fill="#ffffff"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect width="128" height="128" rx="28" fill="#111111"/><ellipse cx="64.0" cy="60.0" rx="46.0" ry="39.0" fill="#E8734A"/><circle cx="21.6" cy="64.5" r="12.5" fill="#E8734A"/><circle cx="21.9" cy="53.4" r="12.5" fill="#E8734A"/><circle cx="26.3" cy="42.9" r="12.5" fill="#E8734A"/><circle cx="34.2" cy="34.0" r="12.5" fill="#E8734A"/><circle cx="44.9" cy="27.5" r="12.5" fill="#E8734A"/><circle cx="57.4" cy="24.2" r="12.5" fill="#E8734A"/><circle cx="70.6" cy="24.2" r="12.5" fill="#E8734A"/><circle cx="83.1" cy="27.5" r="12.5" fill="#E8734A"/><circle cx="93.8" cy="34.0" r="12.5" fill="#E8734A"/><circle cx="101.7" cy="42.9" r="12.5" fill="#E8734A"/><circle cx="106.1" cy="53.4" r="12.5" fill="#E8734A"/><circle cx="106.4" cy="64.5" r="12.5" fill="#E8734A"/><circle cx="22.6" cy="45.2" r="10.9" fill="#E8734A"/><circle cx="22.6" cy="60.0" r="10.9" fill="#E8734A"/><circle cx="22.6" cy="74.0" r="10.9" fill="#E8734A"/><circle cx="105.4" cy="45.2" r="10.9" fill="#E8734A"/><circle cx="105.4" cy="60.0" r="10.9" fill="#E8734A"/><circle cx="105.4" cy="74.0" r="10.9" fill="#E8734A"/><path d="M64.0 23.0 q 4.6000000000000005 10.920000000000002, 0 21.840000000000003" stroke="#00000033" stroke-width="4.7" fill="none" stroke-linecap="round"/><path d="M43.8 35.8 q -14.72 4.68, -1.84 15.600000000000001" stroke="#00000033" stroke-width="3.9" fill="none" stroke-linecap="round"/><path d="M84.2 35.8 q 14.72 4.68, 1.84 15.600000000000001" stroke="#00000033" stroke-width="3.9" fill="none" stroke-linecap="round"/><circle cx="48.4" cy="64.7" r="7.8" fill="#fff"/><circle cx="47.4" cy="65.7" r="3.9" fill="#0a0a0a"/><circle cx="79.6" cy="64.7" r="7.8" fill="#fff"/><circle cx="80.6" cy="65.7" r="3.9" fill="#0a0a0a"/><path d="M53.0 78.7 q 11.04 9.36, 22.08 0" stroke="#0a0a0a" stroke-width="3.9" fill="none" stroke-linecap="round"/></svg>
